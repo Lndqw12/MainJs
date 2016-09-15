@@ -1,5 +1,5 @@
- function sendtxt() {
- alert("кликнул");
+п»ї function sendtxt() {
+ alert("РєР»РёРєРЅСѓР»");
  }
 function res(){
 one=1;
@@ -10,8 +10,8 @@ return sum;
 console.log(res());
 
 function strpn(){
-str1="новаЯ ";
-str2="программа";
+str1="РЅРѕРІР°РЇ ";
+str2="РїСЂРѕРіСЂР°РјРјР°";
 str3=str1+str2;
 return str3;
 }
@@ -28,34 +28,34 @@ return Math.random();
 }
 console.log(ranr());
 
-function laba (){ /*описание функции*/
+function laba (){ /*РѕРїРёСЃР°РЅРёРµ С„СѓРЅРєС†РёРё*/
 for(var i=0;i<10;i++){
 sum=i;
 console.log(i);
 }
 }
-laba();  /*запуск функции*/
+laba();  /*Р·Р°РїСѓСЃРє С„СѓРЅРєС†РёРё*/
 
-function did (){ /*описание функции*/
+function did (){ /*РѕРїРёСЃР°РЅРёРµ С„СѓРЅРєС†РёРё*/
 al=43;
 sum=((al/2)+(al*2))-101;{
 console.log(sum);
 }
 }
-did();  /*запуск функции*/
+did();  /*Р·Р°РїСѓСЃРє С„СѓРЅРєС†РёРё*/
 
-function tlab (){ /*описание функции*/
+function tlab (){ /*РѕРїРёСЃР°РЅРёРµ С„СѓРЅРєС†РёРё*/
 start=new Date (2015,11,20,17,52,00);
 return start;
 } 
-console.log(tlab());  /*запуск функции*/
+console.log(tlab());  /*Р·Р°РїСѓСЃРє С„СѓРЅРєС†РёРё*/
 
 function lab () {
 a=1; b=1;
 if (a==b)
-console.log("равны");
+console.log("СЂР°РІРЅС‹");
 else
-console.log("не равны");
+console.log("РЅРµ СЂР°РІРЅС‹");
 }
 lab ();
 
@@ -75,11 +75,47 @@ workmas();
 
 var name;
 function vvod() {
- name=prompt("Введите свое имя");
+ name=prompt("Р’РІРµРґРёС‚Рµ СЃРІРѕРµ РёРјСЏ");
   return name;
 }
 function exdat() {
- //alert("Вас зовут "+name);
-document.write("Вас зовут "+name);
+ //alert("Р’Р°СЃ Р·РѕРІСѓС‚ "+name);
+document.write("Р’Р°СЃ Р·РѕРІСѓС‚ "+name);
 }
 //}
+
+
+
+
+var newObj = Object.create(null, {
+ size: {
+	value: "large",
+	enumerable: true
+},
+	shape: {
+	value: "round",
+	enumerable: true
+}
+});
+document.write(newObj.size + "<br/>");
+document.write(newObj.shape + "<br/>");
+document.write(Object.getPrototypeOf(newObj));
+// large
+// round
+// null
+
+
+function mySandwich(param1, param2, callback) {
+    alert('РќР°С‡РёРЅР°РµРј РµСЃС‚СЊ Р±СѓС‚РµСЂР±СЂРѕРґ.\n\nРџР°СЂР°РјРµС‚СЂС‹: ' + param1 + ', ' + param2);
+    $('#sandwich').animate({
+        opacity: 0
+    }, 1000, function() {
+        // РђРЅРёРјР°С†РёСЏ Р·Р°РІРµСЂС€РµРЅР°.
+    });
+    if (callback && typeof(callback) === "function") {
+        callback();
+    }
+}
+mySandwich('РІРµС‚С‡РёРЅР°', 'СЃС‹СЂ', function() {
+    alert('Р—Р°РєР°РЅС‡РёРІР°РµРј РµСЃС‚СЊ Р±СѓС‚РµСЂР±СЂРѕРґ.');
+});
